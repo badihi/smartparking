@@ -6,8 +6,7 @@ import QtQuick.Dialogs 1.1
 Page {
     id: page
     anchors.fill: parent
-    anchors.margins: 40
-    title: qsTr("Home")
+    title: qsTr("ثبت‌نام")
     property int fontSize: 20
 
     ColumnLayout {

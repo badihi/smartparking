@@ -1,12 +1,12 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.0
+import QtQuick.Dialogs 1.1
 
 Page {
     id: page
     anchors.fill: parent
-    anchors.margins: 40
-    title: qsTr("Home")
+    title: qsTr("ورود")
     property int fontSize: 20
 
     ColumnLayout {
@@ -99,6 +99,18 @@ Page {
             height: 120
             font.pointSize: fontSize
             font.family: "Tahoma"
+            onClicked: {
+                if (txUsername.text == "user" && txPassword.text == "1234") {
+                    window.type = "user"
+                    window.changePage("Map.ui.qml")
+                } else if (txUsername.text == "guard"
+                           && txPassword.text == "1234") {
+                    window.type = "guard"
+                    window.changePage("Map.ui.qml")
+                } else {
+                    messageDialog.open()
+                }
+            }
         }
 
         Button {
@@ -111,6 +123,7 @@ Page {
             height: 120
             font.pointSize: fontSize
             font.family: "Tahoma"
+            onClicked: window.changePage("Forgot.ui.qml")
         }
 
         Button {
@@ -127,5 +140,12 @@ Page {
             font.family: "Tahoma"
             onClicked: window.changePage("Register.ui.qml")
         }
+    }
+
+    MessageDialog {
+        id: messageDialog
+        title: "خطا!"
+        text: "نام کاربری و یا رمزعبور اشتباه می‌باشد!"
+        icon: "Critical"
     }
 }

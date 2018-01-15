@@ -16,6 +16,8 @@ SOURCES += main.cpp
 
 RESOURCES += qml.qrc
 
+TARGET.CAPABILITY += SwEvent
+
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
@@ -28,4 +30,16 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    Images/logo.png
+    Images/logo.png \
+    android/AndroidManifest.xml \
+    android/gradle/wrapper/gradle-wrapper.jar \
+    android/gradlew \
+    android/res/values/libs.xml \
+    android/build.gradle \
+    android/gradle/wrapper/gradle-wrapper.properties \
+    android/gradlew.bat \
+    Images/bank1.png \
+    Images/bank2.png \
+    Images/bank3.png
+
+ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android

@@ -2,10 +2,20 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Login.ui.qml</file>
-        <file>Page1Form.ui.qml</file>
-        <file>Page2Form.ui.qml</file>
+        <file>Map.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>Images/logo.png</file>
         <file>Register.ui.qml</file>
+        <file>Forgot.ui.qml</file>
+        <file>Images/map.png</file>
+        <file>Images/car-blue.png</file>
+        <file>Images/car-green.png</file>
+        <file>Images/car-red.png</file>
+        <file>Reserve.qml</file>
+        <file>Payment.qml</file>
+        <file>Images/bank1.png</file>
+        <file>Images/bank2.png</file>
+        <file>Images/bank3.png</file>
+        <file>Confirmation.qml</file>
     </qresource>
 </RCC>

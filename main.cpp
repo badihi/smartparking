@@ -9,6 +9,10 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    app.setOrganizationName("Sharif");
+    app.setOrganizationDomain("sharif.edu");
+    app.setApplicationName("Sharif Smart Parking");
+
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
